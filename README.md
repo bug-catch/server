@@ -24,7 +24,13 @@ const bugcatch = require("@bug-catch/server");
 
 const server = express();
 
-server.use("/bugcatch", bugcatch); // --> set custom route; e.g. server.use("/myapi/stats/bugs", bugcatch)
+server.use("/bugcatch", bugcatch({
+    mongodb: {
+        uri: "mongodb://$[username]:$[password]@$[hostlist]/$[database]?authSource=$[authSource]",
+        database: "appname-bugcatch"
+    }
+}));
+
 server.use("/", other_routes);
 ```
 
