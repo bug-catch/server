@@ -15,7 +15,8 @@
         "test:example": "nodemon test/example-server.js"
     },
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "mongodb": "^3.6.1"
     },
     "devDependencies": {
         "debug": "^4.1.1",
