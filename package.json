@@ -15,9 +15,10 @@
         "test:example": "cross-env DEBUG=bugcatch:* nodemon test/example-server.js"
     },
     "dependencies": {
-        "crypto-js": "^4.0.0",
         "express": "^4.17.1",
-        "mongodb": "^3.6.1"
+        "geoip-lite": "^1.4.2",
+        "mongodb": "^3.6.1",
+        "which-browser": "^0.5.1"
     },
     "devDependencies": {
         "cross-env": "^7.0.2",
