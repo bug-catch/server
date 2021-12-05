@@ -17,6 +17,9 @@ server.use((req, res, next) => {
 server.use(
     "/",
     bugcatch({
+        api: {
+            token: "super-duper-secret-password",
+        },
         mongodb: {
             uri: process.env.BUGCATCH_MONGO_URI,
             database: process.env.BUGCATCH_MONGO_DATABASE,

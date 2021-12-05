@@ -1,6 +1,6 @@
 {
     "name": "@bug-catch/server",
-    "version": "1.0.5",
+    "version": "2.4.2",
     "main": "index.js",
     "homepage": "https://github.com/bug-catch/server#readme",
     "description": "Catch all errors and log custom events within any website.",
@@ -16,7 +16,9 @@
     },
     "dependencies": {
         "express": "^4.17.1",
+        "express-rate-limit": "^5.5.1",
         "geoip-lite": "^1.4.2",
+        "moment": "^2.29.1",
         "mongodb": "^3.6.1",
         "which-browser": "^0.5.1"
     },
@@ -25,10 +27,7 @@
         "debug": "^4.1.1",
         "dotenv": "^8.2.0",
         "eslint": "^7.8.1",
-        "gulp": "^4.0.2",
-        "gulp-prettier": "^3.0.0",
-        "nodemon": "^2.0.4",
-        "prettier": "^2.1.1"
+        "nodemon": "^2.0.4"
     },
     "keywords": [
         "bugs",
