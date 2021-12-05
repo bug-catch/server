@@ -25,10 +25,7 @@
         "debug": "^4.1.1",
         "dotenv": "^8.2.0",
         "eslint": "^7.8.1",
-        "gulp": "^4.0.2",
-        "gulp-prettier": "^3.0.0",
-        "nodemon": "^2.0.4",
-        "prettier": "^2.1.1"
+        "nodemon": "^2.0.4"
     },
     "keywords": [
         "bugs",
