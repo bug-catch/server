@@ -13,6 +13,11 @@ server.use((req, res, next) => {
     next();
 });
 
+if (!process.env.BUGCATCH_MONGO_URI || !process.env.BUGCATCH_MONGO_DATABASE) {
+    console.log(`\nERROR: Required ENV vars are missing`);
+    process.exit(1);
+}
+
 //  Applly bugcatch as middleware
 server.use(
     "/",
