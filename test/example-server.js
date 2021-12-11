@@ -27,4 +27,11 @@ server.use(
     })
 );
 
-server.listen(process.env.PORT || 8000);
+const PORT = process.env.PORT || 8000;
+
+server.listen(PORT, () => {
+    console.log(`\nBug-Catch API`);
+    console.log(`-> Port ${PORT} : http://localhost:${PORT}`);
+    console.log(`-> MongoDB   : ${process.env.BUGCATCH_MONGO_DATABASE}`);
+    console.log(``);
+});
