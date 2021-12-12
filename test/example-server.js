@@ -13,6 +13,11 @@ server.use((req, res, next) => {
     next();
 });
 
+if (!process.env.BUGCATCH_MONGO_URI || !process.env.BUGCATCH_MONGO_DATABASE) {
+    console.log(`\nERROR: Required ENV vars are missing`);
+    process.exit(1);
+}
+
 //  Applly bugcatch as middleware
 server.use(
     "/",
@@ -27,4 +32,11 @@ server.use(
     })
 );
 
-server.listen(process.env.PORT || 8000);
+const PORT = process.env.PORT || 8000;
+
+server.listen(PORT, () => {
+    console.log(`\nBug-Catch API`);
+    console.log(`-> Port ${PORT} : http://localhost:${PORT}`);
+    console.log(`-> MongoDB   : ${process.env.BUGCATCH_MONGO_DATABASE}`);
+    console.log(``);
+});
