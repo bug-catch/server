@@ -22,7 +22,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 4,
-  "iteration": 1639839947678,
+  "iteration": 1639839947686,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -81,7 +81,7 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 5,
+        "w": 4,
         "x": 0,
         "y": 4
       },
@@ -149,8 +149,8 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 5,
-        "x": 5,
+        "w": 4,
+        "x": 4,
         "y": 4
       },
       "id": 123132,
@@ -196,6 +196,74 @@
         "type": "marcusolsson-json-datasource",
         "uid": "${ds}"
       },
+      "description": "Incidents\n\nTotal count of all events that have occurred.\n\nIncludes errors + custom events.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 8,
+        "y": 4
+      },
+      "id": 123154,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "${ds}"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.incidents.total",
+              "name": "vitals_count"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "Incidents",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "${ds}"
+      },
       "description": "Custom Events\n\nThe number of unique events (excluding errors) that have occurred.\n\nThis is NOT the total frequency of events, rather it is the number of unique events (if 10 users had the same event it would show 1 here and not 10).",
       "fieldConfig": {
         "defaults": {
@@ -217,8 +285,8 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 5,
-        "x": 10,
+        "w": 4,
+        "x": 12,
         "y": 4
       },
       "id": 123148,
@@ -285,8 +353,8 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 5,
-        "x": 15,
+        "w": 4,
+        "x": 16,
         "y": 4
       },
       "id": 123149,
@@ -341,12 +409,148 @@
       "type": "row"
     },
     {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "${ds}"
+      },
+      "description": "Events\n\nCount of every event which has occurred (not including errors).",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 0,
+        "y": 11
+      },
+      "id": 123153,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "${ds}"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.incidents.total_custom",
+              "name": "vitals_count"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "Custom Events Occurrences",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "${ds}"
+      },
+      "description": "Errors\n\nCount of every error which has occurred.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 4,
+        "y": 11
+      },
+      "id": 123152,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "${ds}"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.incidents.total_errors",
+              "name": "vitals_count"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "Error Occurrences",
+      "type": "stat"
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 11
+        "y": 17
       },
       "id": 123136,
       "panels": [],
@@ -379,7 +583,7 @@
         "h": 18,
         "w": 11,
         "x": 0,
-        "y": 12
+        "y": 18
       },
       "id": 123137,
       "options": {
@@ -481,7 +685,7 @@
         "h": 6,
         "w": 13,
         "x": 11,
-        "y": 12
+        "y": 18
       },
       "id": 123147,
       "options": {
@@ -573,7 +777,7 @@
         "h": 6,
         "w": 13,
         "x": 11,
-        "y": 18
+        "y": 24
       },
       "id": 123133,
       "options": {
@@ -657,7 +861,7 @@
               }
             ]
           },
-          "unit": "none"
+          "unit": "decgbytes"
         },
         "overrides": []
       },
@@ -665,7 +869,7 @@
         "h": 6,
         "w": 13,
         "x": 11,
-        "y": 24
+        "y": 30
       },
       "id": 123134,
       "options": {
@@ -719,7 +923,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 30
+        "y": 36
       },
       "id": 123139,
       "panels": [],
@@ -763,7 +967,7 @@
         "h": 5,
         "w": 8,
         "x": 0,
-        "y": 31
+        "y": 37
       },
       "id": 123140,
       "options": {
@@ -840,7 +1044,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 31
+        "y": 37
       },
       "id": 123141,
       "options": {
@@ -917,7 +1121,7 @@
         "h": 5,
         "w": 8,
         "x": 16,
-        "y": 31
+        "y": 37
       },
       "id": 123142,
       "options": {
@@ -1002,7 +1206,7 @@
         "h": 5,
         "w": 8,
         "x": 0,
-        "y": 36
+        "y": 42
       },
       "id": 123143,
       "options": {
@@ -1087,7 +1291,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 36
+        "y": 42
       },
       "id": 123144,
       "options": {
@@ -1172,7 +1376,7 @@
         "h": 5,
         "w": 8,
         "x": 16,
-        "y": 36
+        "y": 42
       },
       "id": 123145,
       "options": {
@@ -1249,7 +1453,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 41
+        "y": 47
       },
       "id": 123146,
       "options": {
@@ -1358,6 +1562,6 @@
   "timezone": "browser",
   "title": "Bug-Catch Overview",
   "uid": "3za-DNTnk",
-  "version": 8,
+  "version": 11,
   "weekStart": ""
 }
