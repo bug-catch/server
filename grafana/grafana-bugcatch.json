@@ -69,12 +69,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           }
@@ -140,12 +136,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           }
@@ -221,6 +213,94 @@
           },
           "mappings": [],
           "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "semi-dark-green",
+                "value": null
+              },
+              {
+                "color": "light-green",
+                "value": 5
+              },
+              {
+                "color": "orange",
+                "value": 10
+              },
+              {
+                "color": "red",
+                "value": 18
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 0,
+        "y": 11
+      },
+      "id": 123137,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.device.lowEndDevicesPercent",
+              "name": "Low End Device"
+            },
+            {
+              "jsonPath": "$.vitals.device.lowEndExperiencesPercent",
+              "language": "jsonpath",
+              "name": "Low End Experience"
+            },
+            {
+              "jsonPath": "$.vitals.device.serviceWorkerUnsupportedPercent",
+              "language": "jsonpath",
+              "name": "Service Worker Unsupported"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "Percentages Of",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
             "mode": "absolute",
             "steps": [
               {
@@ -251,8 +331,8 @@
       },
       "gridPos": {
         "h": 7,
-        "w": 11,
-        "x": 0,
+        "w": 8,
+        "x": 8,
         "y": 11
       },
       "id": 123133,
@@ -343,8 +423,8 @@
       },
       "gridPos": {
         "h": 7,
-        "w": 11,
-        "x": 11,
+        "w": 8,
+        "x": 16,
         "y": 11
       },
       "id": 123134,
@@ -394,100 +474,12 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "percentage",
-            "steps": [
-              {
-                "color": "semi-dark-green",
-                "value": null
-              },
-              {
-                "color": "light-green",
-                "value": 5
-              },
-              {
-                "color": "orange",
-                "value": 10
-              },
-              {
-                "color": "red",
-                "value": 18
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 7,
-        "w": 11,
-        "x": 0,
-        "y": 18
-      },
-      "id": 123137,
-      "options": {
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showThresholdLabels": false,
-        "showThresholdMarkers": true
-      },
-      "pluginVersion": "8.3.3",
-      "targets": [
-        {
-          "cacheDurationSeconds": 300,
-          "datasource": {
-            "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
-          },
-          "fields": [
-            {
-              "jsonPath": "$.vitals.device.lowEndDevicesPercent",
-              "name": "Low End Device"
-            },
-            {
-              "jsonPath": "$.vitals.device.lowEndExperiencesPercent",
-              "language": "jsonpath",
-              "name": "Low End Experience"
-            },
-            {
-              "jsonPath": "$.vitals.device.serviceWorkerUnsupportedPercent",
-              "language": "jsonpath",
-              "name": "Service Worker Unsupported"
-            }
-          ],
-          "method": "GET",
-          "queryParams": "",
-          "refId": "A",
-          "urlPath": ""
-        }
-      ],
-      "title": "Percentages Of",
-      "type": "gauge"
-    },
-    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 18
       },
       "id": 123139,
       "panels": [],
@@ -531,7 +523,7 @@
         "h": 5,
         "w": 8,
         "x": 0,
-        "y": 26
+        "y": 19
       },
       "id": 123140,
       "options": {
@@ -608,7 +600,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 26
+        "y": 19
       },
       "id": 123141,
       "options": {
@@ -685,7 +677,7 @@
         "h": 5,
         "w": 8,
         "x": 16,
-        "y": 26
+        "y": 19
       },
       "id": 123142,
       "options": {
@@ -770,7 +762,7 @@
         "h": 5,
         "w": 8,
         "x": 0,
-        "y": 31
+        "y": 24
       },
       "id": 123143,
       "options": {
@@ -855,7 +847,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 31
+        "y": 24
       },
       "id": 123144,
       "options": {
@@ -940,7 +932,7 @@
         "h": 5,
         "w": 8,
         "x": 16,
-        "y": 31
+        "y": 24
       },
       "id": 123145,
       "options": {
@@ -1017,7 +1009,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 36
+        "y": 29
       },
       "id": 123146,
       "options": {
@@ -1106,6 +1098,6 @@
   "timezone": "browser",
   "title": "Bug-Catch Overview",
   "uid": "3za-DNTnk",
-  "version": 11,
+  "version": 13,
   "weekStart": ""
 }
