@@ -22,7 +22,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 4,
-  "iteration": 1639848943240,
+  "iteration": 1639848943242,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -111,7 +111,7 @@
           "fields": [
             {
               "jsonPath": "$.users.total",
-              "name": "vitals_count"
+              "name": "Unique Users"
             }
           ],
           "method": "GET",
@@ -179,7 +179,7 @@
           "fields": [
             {
               "jsonPath": "$.vitals.count",
-              "name": "vitals_count"
+              "name": "Vitals Collected"
             }
           ],
           "method": "GET",
@@ -247,7 +247,7 @@
           "fields": [
             {
               "jsonPath": "$.incidents.total",
-              "name": "vitals_count"
+              "name": "Incidents"
             }
           ],
           "method": "GET",
@@ -315,7 +315,7 @@
           "fields": [
             {
               "jsonPath": "$.events.total_custom",
-              "name": "vitals_count"
+              "name": "Custom Events"
             }
           ],
           "method": "GET",
@@ -395,7 +395,7 @@
           "fields": [
             {
               "jsonPath": "$.events.total_errors",
-              "name": "vitals_count"
+              "name": "Errors"
             }
           ],
           "method": "GET",
@@ -476,7 +476,7 @@
           "fields": [
             {
               "jsonPath": "$.incidents.total_custom",
-              "name": "vitals_count"
+              "name": "Custom Events Occurrences"
             }
           ],
           "method": "GET",
@@ -556,7 +556,7 @@
           "fields": [
             {
               "jsonPath": "$.incidents.total_errors",
-              "name": "vitals_count"
+              "name": "Error Occurrences"
             }
           ],
           "method": "GET",
@@ -623,7 +623,7 @@
           "fields": [
             {
               "jsonPath": "$.incidents.errors.mode.data.message",
-              "name": "error_message"
+              "name": "Most Common Error"
             }
           ],
           "method": "GET",
@@ -674,6 +674,9 @@
           "fields": "/.*/",
           "values": true
         },
+        "text": {
+          "valueSize": 40
+        },
         "textMode": "auto"
       },
       "pluginVersion": "8.3.3",
@@ -687,7 +690,7 @@
           "fields": [
             {
               "jsonPath": "$.incidents.events.mode.type",
-              "name": "event_title"
+              "name": "Most Common Event"
             }
           ],
           "method": "GET",
@@ -1717,6 +1720,6 @@
   "timezone": "browser",
   "title": "Bug-Catch Overview",
   "uid": "3za-DNTnk",
-  "version": 13,
+  "version": 15,
   "weekStart": ""
 }
