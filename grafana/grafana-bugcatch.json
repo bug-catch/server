@@ -22,7 +22,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 4,
-  "iteration": 1639839947686,
+  "iteration": 1639848943240,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -343,8 +343,20 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red",
+                "color": "green",
                 "value": null
+              },
+              {
+                "color": "light-yellow",
+                "value": 2
+              },
+              {
+                "color": "dark-yellow",
+                "value": 6
+              },
+              {
+                "color": "red",
+                "value": 10
               }
             ]
           }
@@ -492,8 +504,20 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red",
+                "color": "green",
                 "value": null
+              },
+              {
+                "color": "light-yellow",
+                "value": 2
+              },
+              {
+                "color": "#EAB839",
+                "value": 6
+              },
+              {
+                "color": "red",
+                "value": 10
               }
             ]
           }
@@ -542,6 +566,137 @@
         }
       ],
       "title": "Error Occurrences",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "${ds}"
+      },
+      "description": "Most Common Error\n\nThis error has occurred more times than any other.",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 8,
+        "x": 8,
+        "y": 11
+      },
+      "id": 123155,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "text": {
+          "valueSize": 40
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "${ds}"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.incidents.errors.mode.data.message",
+              "name": "error_message"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "Most Common Error",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "${ds}"
+      },
+      "description": "Most Common Event\n\nThis event has occurred more times than any other.\n\nNot including errors - custom events only.",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 8,
+        "x": 16,
+        "y": 11
+      },
+      "id": 123156,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/.*/",
+          "values": true
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "${ds}"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.incidents.events.mode.type",
+              "name": "event_title"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "Most Common Event",
       "type": "stat"
     },
     {
@@ -1509,7 +1664,7 @@
     "list": [
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "Bug-Catch-TEST",
           "value": "Bug-Catch-TEST"
         },
@@ -1562,6 +1717,6 @@
   "timezone": "browser",
   "title": "Bug-Catch Overview",
   "uid": "3za-DNTnk",
-  "version": 11,
+  "version": 13,
   "weekStart": ""
 }
