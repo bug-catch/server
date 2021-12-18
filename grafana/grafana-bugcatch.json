@@ -1,0 +1,1111 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 123129,
+      "options": {
+        "content": "# Bug-Catch Overview\n",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.3.3",
+      "title": "Bug-Catch Overview",
+      "type": "text"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 3
+      },
+      "id": 123127,
+      "panels": [],
+      "title": "Overview",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 0,
+        "y": 4
+      },
+      "id": 123125,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.users.total",
+              "name": "vitals_count"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "Unique Users",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 5,
+        "y": 4
+      },
+      "id": 123132,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.count",
+              "name": "vitals_count"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "Vitals Collected",
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 10
+      },
+      "id": 123136,
+      "panels": [],
+      "title": "Devices",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 3
+              },
+              {
+                "color": "#EAB839",
+                "value": 4
+              },
+              {
+                "color": "light-green",
+                "value": 6
+              },
+              {
+                "color": "semi-dark-green",
+                "value": 8
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 11,
+        "x": 0,
+        "y": 11
+      },
+      "id": 123133,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.device.cpuCores.min",
+              "name": "Minimum"
+            },
+            {
+              "jsonPath": "$.vitals.device.cpuCores.avg",
+              "language": "jsonpath",
+              "name": "Average"
+            },
+            {
+              "jsonPath": "$.vitals.device.cpuCores.max",
+              "language": "jsonpath",
+              "name": "Maximum"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "CPU Logical Cores",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 3
+              },
+              {
+                "color": "#EAB839",
+                "value": 4
+              },
+              {
+                "color": "light-green",
+                "value": 6
+              },
+              {
+                "color": "semi-dark-green",
+                "value": 8
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 11,
+        "x": 11,
+        "y": 11
+      },
+      "id": 123134,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.device.memory.min",
+              "name": "Minimum"
+            },
+            {
+              "jsonPath": "$.vitals.device.memory.avg",
+              "language": "jsonpath",
+              "name": "Average"
+            },
+            {
+              "jsonPath": "$.vitals.device.memory.max",
+              "language": "jsonpath",
+              "name": "Maximum"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "Memory",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "semi-dark-green",
+                "value": null
+              },
+              {
+                "color": "light-green",
+                "value": 5
+              },
+              {
+                "color": "orange",
+                "value": 10
+              },
+              {
+                "color": "red",
+                "value": 18
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 11,
+        "x": 0,
+        "y": 18
+      },
+      "id": 123137,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.device.lowEndDevicesPercent",
+              "name": "Low End Device"
+            },
+            {
+              "jsonPath": "$.vitals.device.lowEndExperiencesPercent",
+              "language": "jsonpath",
+              "name": "Low End Experience"
+            },
+            {
+              "jsonPath": "$.vitals.device.serviceWorkerUnsupportedPercent",
+              "language": "jsonpath",
+              "name": "Service Worker Unsupported"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "Percentages Of",
+      "type": "gauge"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 25
+      },
+      "id": 123139,
+      "panels": [],
+      "title": "Web Vitals",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "description": "TTFB : Time Till First Byte\n\nMeasures the duration from the user or client making an HTTP request to the first byte of the page being received by the client's browser.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 400
+              },
+              {
+                "color": "red",
+                "value": 600
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 26
+      },
+      "id": 123140,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.ttfb.min",
+              "name": "Minimum"
+            },
+            {
+              "jsonPath": "$.vitals.ttfb.avg",
+              "language": "jsonpath",
+              "name": "Average"
+            },
+            {
+              "jsonPath": "$.vitals.ttfb.max",
+              "language": "jsonpath",
+              "name": "Maximum"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "TTFB : Time Till First Byte",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "description": "FP : First Paint\n\nThe exact time taken for the browser to render anything as visually different from what was on the screen before navigation, e.g. a background change after a long blank white screen time.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 26
+      },
+      "id": 123141,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.fp.min",
+              "name": "Minimum"
+            },
+            {
+              "jsonPath": "$.vitals.fp.avg",
+              "language": "jsonpath",
+              "name": "Average"
+            },
+            {
+              "jsonPath": "$.vitals.fp.max",
+              "language": "jsonpath",
+              "name": "Maximum"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "FP : First Paint",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "description": "FCP : First Contentful Paint\n\nThe exact time taken for the browser to render the first bit of content from the DOM, which can be anything from an important image, text, or even the small SVG at the bottom of the page.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 26
+      },
+      "id": 123142,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.fcp.min",
+              "name": "Minimum"
+            },
+            {
+              "jsonPath": "$.vitals.fcp.avg",
+              "language": "jsonpath",
+              "name": "Average"
+            },
+            {
+              "jsonPath": "$.vitals.fcp.max",
+              "language": "jsonpath",
+              "name": "Maximum"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "FCP : First Contentful Paint",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "description": "FID : First Input Delay\n\nMeasures interactivity. To provide a good user experience, pages should have a FID of 100 milliseconds or less.\n\nMeasures the time from when a user first interacts with your site (i.e. when they click a link, tap on a button) to the time when the browser is actually able to respond to that interaction.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 100
+              },
+              {
+                "color": "red",
+                "value": 300
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 31
+      },
+      "id": 123143,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.fid.min",
+              "name": "Minimum"
+            },
+            {
+              "jsonPath": "$.vitals.fid.avg",
+              "language": "jsonpath",
+              "name": "Average"
+            },
+            {
+              "jsonPath": "$.vitals.fid.max",
+              "language": "jsonpath",
+              "name": "Maximum"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "FID : First Input Delay",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "description": "LCP : Largest Contentful Paint\n\nMeasures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds of when the page first starts loading.\n\nMarks the point in the page load timeline when the page's main content has likely loaded—a fast LCP helps reassure the user that the page is useful.\n\nWe end the Largest Contentful Paint measure at two points: when First Input Delay happen and when the page's lifecycle state changes to hidden.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 2400
+              },
+              {
+                "color": "red",
+                "value": 3800
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 31
+      },
+      "id": 123144,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.lcp.min",
+              "name": "Minimum"
+            },
+            {
+              "jsonPath": "$.vitals.lcp.avg",
+              "language": "jsonpath",
+              "name": "Average"
+            },
+            {
+              "jsonPath": "$.vitals.lcp.max",
+              "language": "jsonpath",
+              "name": "Maximum"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "LCP : Largest Contentful Paint",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "description": "CLS : Cumulative Layout Shift\n\nMeasures visual stability. To provide a good user experience, pages should maintain a CLS of 0.1. or less.\n\nQuantifies how often users experience unexpected layout shifts — a low CLS helps ensure that the page is delightful.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 0.1
+              },
+              {
+                "color": "red",
+                "value": 0.25
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 31
+      },
+      "id": 123145,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.cls.min",
+              "name": "Minimum"
+            },
+            {
+              "jsonPath": "$.vitals.cls.avg",
+              "language": "jsonpath",
+              "name": "Average"
+            },
+            {
+              "jsonPath": "$.vitals.cls.max",
+              "language": "jsonpath",
+              "name": "Maximum"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "CLS : Cumulative Layout Shift",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "1SIjHHT7k"
+      },
+      "description": "TBT : Total Blocking Time\n\nMeasures load responsiveness to quantify the severity of how non-interactive a page is prior to it becoming reliably interactive — a low TBT helps ensure that the page is usable.\n\nWe end the Total Blocking Time measure at four points: when First Input Delay happen, 5 seconds after FID, 10 seconds after FID and when the page's lifecycle state changes to hidden.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 36
+      },
+      "id": 123146,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "1SIjHHT7k"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.tbt.min",
+              "name": "Minimum"
+            },
+            {
+              "jsonPath": "$.vitals.tbt.avg",
+              "language": "jsonpath",
+              "name": "Average"
+            },
+            {
+              "jsonPath": "$.vitals.tbt.max",
+              "language": "jsonpath",
+              "name": "Maximum"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "TBT : Total Blocking Time",
+      "type": "gauge"
+    }
+  ],
+  "schemaVersion": 34,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "hidden": true,
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ],
+    "type": "timepicker"
+  },
+  "timezone": "browser",
+  "title": "Bug-Catch Overview",
+  "uid": "3za-DNTnk",
+  "version": 11,
+  "weekStart": ""
+}
