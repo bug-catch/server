@@ -21,7 +21,8 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 4,
+  "iteration": 1639839947672,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -57,7 +58,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "fieldConfig": {
         "defaults": {
@@ -104,7 +105,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -124,7 +125,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "fieldConfig": {
         "defaults": {
@@ -171,7 +172,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -204,7 +205,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "fieldConfig": {
         "defaults": {
@@ -262,7 +263,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -292,7 +293,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "fieldConfig": {
         "defaults": {
@@ -354,7 +355,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -384,7 +385,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "fieldConfig": {
         "defaults": {
@@ -446,7 +447,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -489,7 +490,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "description": "TTFB : Time Till First Byte\n\nMeasures the duration from the user or client making an HTTP request to the first byte of the page being received by the client's browser.",
       "fieldConfig": {
@@ -544,7 +545,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -574,7 +575,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "description": "FP : First Paint\n\nThe exact time taken for the browser to render anything as visually different from what was on the screen before navigation, e.g. a background change after a long blank white screen time.",
       "fieldConfig": {
@@ -621,7 +622,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -651,7 +652,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "description": "FCP : First Contentful Paint\n\nThe exact time taken for the browser to render the first bit of content from the DOM, which can be anything from an important image, text, or even the small SVG at the bottom of the page.",
       "fieldConfig": {
@@ -698,7 +699,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -728,7 +729,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "description": "FID : First Input Delay\n\nMeasures interactivity. To provide a good user experience, pages should have a FID of 100 milliseconds or less.\n\nMeasures the time from when a user first interacts with your site (i.e. when they click a link, tap on a button) to the time when the browser is actually able to respond to that interaction.",
       "fieldConfig": {
@@ -783,7 +784,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -813,7 +814,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "description": "LCP : Largest Contentful Paint\n\nMeasures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds of when the page first starts loading.\n\nMarks the point in the page load timeline when the page's main content has likely loaded—a fast LCP helps reassure the user that the page is useful.\n\nWe end the Largest Contentful Paint measure at two points: when First Input Delay happen and when the page's lifecycle state changes to hidden.",
       "fieldConfig": {
@@ -868,7 +869,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -898,7 +899,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "description": "CLS : Cumulative Layout Shift\n\nMeasures visual stability. To provide a good user experience, pages should maintain a CLS of 0.1. or less.\n\nQuantifies how often users experience unexpected layout shifts — a low CLS helps ensure that the page is delightful.",
       "fieldConfig": {
@@ -953,7 +954,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -983,7 +984,7 @@
     {
       "datasource": {
         "type": "marcusolsson-json-datasource",
-        "uid": "1SIjHHT7k"
+        "uid": "${ds}"
       },
       "description": "TBT : Total Blocking Time\n\nMeasures load responsiveness to quantify the severity of how non-interactive a page is prior to it becoming reliably interactive — a low TBT helps ensure that the page is usable.\n\nWe end the Total Blocking Time measure at four points: when First Input Delay happen, 5 seconds after FID, 10 seconds after FID and when the page's lifecycle state changes to hidden.",
       "fieldConfig": {
@@ -1030,7 +1031,7 @@
           "cacheDurationSeconds": 300,
           "datasource": {
             "type": "marcusolsson-json-datasource",
-            "uid": "1SIjHHT7k"
+            "uid": "${ds}"
           },
           "fields": [
             {
@@ -1062,7 +1063,27 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "text": "Bug-Catch-TEST",
+          "value": "Bug-Catch-TEST"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "datasource",
+        "multi": false,
+        "name": "ds",
+        "options": [],
+        "query": "marcusolsson-json-datasource",
+        "queryValue": "",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      }
+    ]
   },
   "time": {
     "from": "now-6h",
@@ -1098,6 +1119,6 @@
   "timezone": "browser",
   "title": "Bug-Catch Overview",
   "uid": "3za-DNTnk",
-  "version": 13,
+  "version": 2,
   "weekStart": ""
 }
