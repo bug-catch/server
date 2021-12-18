@@ -217,6 +217,95 @@
             "mode": "percentage",
             "steps": [
               {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 5
+              },
+              {
+                "color": "green",
+                "value": 20
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 0,
+        "y": 11
+      },
+      "id": 123137,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "${ds}"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.device.device.desktopPercent",
+              "name": "Desktop"
+            },
+            {
+              "jsonPath": "$.vitals.device.device.mobilePercent",
+              "language": "jsonpath",
+              "name": "Mobile"
+            },
+            {
+              "jsonPath": "$.vitals.device.device.tabletPercent",
+              "language": "jsonpath",
+              "name": "Tablet"
+            },
+            {
+              "jsonPath": "$.vitals.device.device.otherPercent",
+              "language": "jsonpath",
+              "name": "Other / Unknown"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "Percentages Of — Device Form-Factor",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "${ds}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
                 "color": "semi-dark-green",
                 "value": null
               },
@@ -239,12 +328,12 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
-        "w": 8,
-        "x": 0,
+        "h": 6,
+        "w": 12,
+        "x": 12,
         "y": 11
       },
-      "id": 123137,
+      "id": 123147,
       "options": {
         "orientation": "auto",
         "reduceOptions": {
@@ -287,7 +376,7 @@
           "urlPath": ""
         }
       ],
-      "title": "Percentages Of",
+      "title": "Percentages Of — Device Capability",
       "type": "gauge"
     },
     {
@@ -331,102 +420,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
-        "w": 8,
-        "x": 8,
-        "y": 11
-      },
-      "id": 123133,
-      "options": {
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showThresholdLabels": false,
-        "showThresholdMarkers": true
-      },
-      "pluginVersion": "8.3.3",
-      "targets": [
-        {
-          "cacheDurationSeconds": 300,
-          "datasource": {
-            "type": "marcusolsson-json-datasource",
-            "uid": "${ds}"
-          },
-          "fields": [
-            {
-              "jsonPath": "$.vitals.device.cpuCores.min",
-              "name": "Minimum"
-            },
-            {
-              "jsonPath": "$.vitals.device.cpuCores.avg",
-              "language": "jsonpath",
-              "name": "Average"
-            },
-            {
-              "jsonPath": "$.vitals.device.cpuCores.max",
-              "language": "jsonpath",
-              "name": "Maximum"
-            }
-          ],
-          "method": "GET",
-          "queryParams": "",
-          "refId": "A",
-          "urlPath": ""
-        }
-      ],
-      "title": "CPU Logical Cores",
-      "type": "gauge"
-    },
-    {
-      "datasource": {
-        "type": "marcusolsson-json-datasource",
-        "uid": "${ds}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "red",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 3
-              },
-              {
-                "color": "#EAB839",
-                "value": 4
-              },
-              {
-                "color": "light-green",
-                "value": 6
-              },
-              {
-                "color": "semi-dark-green",
-                "value": 8
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 7,
-        "w": 8,
-        "x": 16,
-        "y": 11
+        "h": 6,
+        "w": 12,
+        "x": 0,
+        "y": 17
       },
       "id": 123134,
       "options": {
@@ -475,12 +472,104 @@
       "type": "gauge"
     },
     {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "${ds}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 3
+              },
+              {
+                "color": "#EAB839",
+                "value": 4
+              },
+              {
+                "color": "light-green",
+                "value": 6
+              },
+              {
+                "color": "semi-dark-green",
+                "value": 8
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 17
+      },
+      "id": 123133,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "${ds}"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.vitals.device.cpuCores.min",
+              "name": "Minimum"
+            },
+            {
+              "jsonPath": "$.vitals.device.cpuCores.avg",
+              "language": "jsonpath",
+              "name": "Average"
+            },
+            {
+              "jsonPath": "$.vitals.device.cpuCores.max",
+              "language": "jsonpath",
+              "name": "Maximum"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": ""
+        }
+      ],
+      "title": "CPU Logical Cores",
+      "type": "gauge"
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 23
       },
       "id": 123139,
       "panels": [],
@@ -524,7 +613,7 @@
         "h": 5,
         "w": 8,
         "x": 0,
-        "y": 19
+        "y": 24
       },
       "id": 123140,
       "options": {
@@ -601,7 +690,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 19
+        "y": 24
       },
       "id": 123141,
       "options": {
@@ -678,7 +767,7 @@
         "h": 5,
         "w": 8,
         "x": 16,
-        "y": 19
+        "y": 24
       },
       "id": 123142,
       "options": {
@@ -763,7 +852,7 @@
         "h": 5,
         "w": 8,
         "x": 0,
-        "y": 24
+        "y": 29
       },
       "id": 123143,
       "options": {
@@ -848,7 +937,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 24
+        "y": 29
       },
       "id": 123144,
       "options": {
@@ -933,7 +1022,7 @@
         "h": 5,
         "w": 8,
         "x": 16,
-        "y": 24
+        "y": 29
       },
       "id": 123145,
       "options": {
@@ -1010,7 +1099,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 29
+        "y": 34
       },
       "id": 123146,
       "options": {
@@ -1119,6 +1208,6 @@
   "timezone": "browser",
   "title": "Bug-Catch Overview",
   "uid": "3za-DNTnk",
-  "version": 3,
+  "version": 5,
   "weekStart": ""
 }
